@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name – Financial Analyst</title>
+  <title>Thyme Inn – Financial Analyst</title>
   <meta name="description" content="Portfolio of a financial analyst: forecasting, valuation and risk modelling.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FFA07A'/%3E%3Cpath d='M5 22 12 15 17 19 27 8' fill='none' stroke='%232E3238' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <!-- Montserrat is the free fallback until Gotham is added (see README) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,11 +18,12 @@
 
   <header class="site-header">
     <div class="wrap site-header-inner">
-      <a class="logo" href="#top">Your Name</a>
+      <a class="logo" href="#top">Thyme Inn</a>
       <nav aria-label="Main">
         <ul class="nav-list">
           <li><a href="#work">Work</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#cv">CV</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -40,7 +42,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#work">View selected work</a>
-          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="downloads/Thyme-Inn-CV.pdf" download>Download CV (PDF)</a>
         </div>
 
         <figure class="chart">
@@ -196,6 +198,29 @@
       </div>
     </section>
 
+    <!-- CV AND SLIDES -->
+    <section class="section section-grey" id="cv">
+      <div class="wrap">
+        <h2 class="section-title">CV and slides</h2>
+        <p class="section-intro">
+          Take a copy with you. The CV is one page; the slides run six pages and suit a screen share.
+        </p>
+
+        <div class="downloads">
+          <div class="download">
+            <h3>Curriculum vitae</h3>
+            <p>Experience, results, skills and credentials on a single A4 page.</p>
+            <a class="btn btn-primary" href="downloads/Thyme-Inn-CV.pdf" download>Download CV (PDF)</a>
+          </div>
+          <div class="download">
+            <h3>Slide deck</h3>
+            <p>Profile, career chart, selected work and contact details in a 16:9 deck.</p>
+            <a class="btn btn-secondary" href="downloads/Thyme-Inn-Slides.pdf" download>Download slides (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section class="section section-salmon" id="contact">
       <div class="wrap contact">
@@ -209,6 +234,8 @@
             <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
             &nbsp;/&nbsp;
             <a href="https://github.com/your-username">GitHub</a>
+            &nbsp;/&nbsp;
+            <a href="https://www.youtube.com/channel/UCObCmO3cjvXgU2UhgttaAZw/" target="_blank" rel="noopener">YouTube</a>
           </p>
         </div>
 
@@ -239,7 +266,7 @@
 
   <footer class="site-footer">
     <div class="wrap site-footer-inner">
-      <p>© 2026 Your Name</p>
+      <p>© 2026 Thyme Inn</p>
       <p>Figures shown are sample data.</p>
     </div>
   </footer>
