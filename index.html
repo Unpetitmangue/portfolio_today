@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name – Financial Analyst</title>
+  <meta name="description" content="Portfolio of a financial analyst: forecasting, valuation and risk modelling.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FFA07A'/%3E%3Cpath d='M5 22 12 15 17 19 27 8' fill='none' stroke='%232E3238' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <a class="logo" href="#top">Your Name</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO: headline + career chart -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <h1 class="hero-title">I turn messy financials into decisions you can act on.</h1>
+        <p class="hero-lede">
+          Financial analyst with eight years in equity research, budgeting and risk modelling.
+          I build forecasts that finance teams trust and explain them in plain language.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">View selected work</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+        </div>
+
+        <figure class="chart">
+          <figcaption class="chart-caption">
+            <span class="chart-title">Career so far</span>
+            <span class="chart-note">Scope of responsibility, 2018–2026 (illustrative)</span>
+          </figcaption>
+
+          <div class="chart-scroll">
+            <svg class="chart-svg" viewBox="0 0 1000 330" role="img"
+                 aria-label="Line chart showing responsibility rising from 2018 to 2026, with a dip in 2020 followed by steady growth. Milestones are listed below the chart.">
+              <g class="chart-grid">
+                <line x1="40" y1="290" x2="960" y2="290"/>
+                <line x1="40" y1="230" x2="960" y2="230"/>
+                <line x1="40" y1="170" x2="960" y2="170"/>
+                <line x1="40" y1="110" x2="960" y2="110"/>
+                <line x1="40" y1="50"  x2="960" y2="50"/>
+              </g>
+
+              <path class="chart-area"
+                    d="M40 250 L155 235 L270 270 L385 215 L500 190 L615 200 L730 140 L845 105 L960 60 L960 290 L40 290 Z"/>
+              <path class="chart-line" pathLength="1"
+                    d="M40 250 L155 235 L270 270 L385 215 L500 190 L615 200 L730 140 L845 105 L960 60"/>
+
+              <g class="chart-dots">
+                <circle cx="40"  cy="250" r="7"/>
+                <circle cx="270" cy="270" r="7"/>
+                <circle cx="500" cy="190" r="7"/>
+                <circle cx="730" cy="140" r="7"/>
+                <circle cx="960" cy="60"  r="7"/>
+              </g>
+
+              <g class="chart-axis">
+                <text x="40"  y="316" text-anchor="middle">2018</text>
+                <text x="155" y="316" text-anchor="middle">2019</text>
+                <text x="270" y="316" text-anchor="middle">2020</text>
+                <text x="385" y="316" text-anchor="middle">2021</text>
+                <text x="500" y="316" text-anchor="middle">2022</text>
+                <text x="615" y="316" text-anchor="middle">2023</text>
+                <text x="730" y="316" text-anchor="middle">2024</text>
+                <text x="845" y="316" text-anchor="middle">2025</text>
+                <text x="960" y="316" text-anchor="middle">2026</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Replace these milestones with your own career moments. Keep the years matching the dots above. -->
+          <dl class="milestones">
+            <div class="milestone">
+              <dt>2018</dt>
+              <dd>Junior analyst at Northbridge Capital</dd>
+            </div>
+            <div class="milestone">
+              <dt>2020</dt>
+              <dd>Moved into risk modelling during the downturn</dd>
+            </div>
+            <div class="milestone">
+              <dt>2022</dt>
+              <dd>Promoted to senior analyst; passed CFA Level II</dd>
+            </div>
+            <div class="milestone">
+              <dt>2024</dt>
+              <dd>Led the forecasting rebuild at Harbor Group</dd>
+            </div>
+            <div class="milestone">
+              <dt>2026</dt>
+              <dd>Associate director, portfolio strategy</dd>
+            </div>
+          </dl>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="section section-grey" id="work">
+      <div class="wrap">
+        <h2 class="section-title">Selected work</h2>
+        <p class="section-intro">
+          Four projects where the numbers changed how a team planned, spent or reported.
+        </p>
+
+        <!-- Duplicate a <li> to add a project -->
+        <ul class="ledger">
+          <li class="ledger-row">
+            <p class="ledger-year">2025</p>
+            <div class="ledger-body">
+              <h3>Rolling revenue forecast</h3>
+              <p>Replaced a quarterly spreadsheet process with a driver-based model that finance and sales both update.</p>
+            </div>
+            <p class="ledger-result"><strong>+18%</strong> forecast accuracy</p>
+          </li>
+          <li class="ledger-row">
+            <p class="ledger-year">2024</p>
+            <div class="ledger-body">
+              <h3>Vendor spend review</h3>
+              <p>Mapped three years of payables, flagged duplicate contracts and renegotiated the largest five suppliers.</p>
+            </div>
+            <p class="ledger-result"><strong>$2.4M</strong> annual savings</p>
+          </li>
+          <li class="ledger-row">
+            <p class="ledger-year">2023</p>
+            <div class="ledger-body">
+              <h3>Month-end close automation</h3>
+              <p>Scripted reconciliations and variance commentary in Python so the team reviews exceptions, not every line.</p>
+            </div>
+            <p class="ledger-result"><strong>−32%</strong> days to close</p>
+          </li>
+          <li class="ledger-row">
+            <p class="ledger-year">2021</p>
+            <div class="ledger-body">
+              <h3>Sector coverage initiation</h3>
+              <p>Built valuation models and wrote initiating reports for consumer and industrial names.</p>
+            </div>
+            <p class="ledger-result"><strong>11</strong> companies covered</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <h2 class="section-title">Skills and credentials</h2>
+
+        <div class="skills">
+          <div class="skills-col">
+            <h3>Analysis</h3>
+            <ul class="skills-list">
+              <li>Discounted cash flow and comparables</li>
+              <li>Scenario and sensitivity analysis</li>
+              <li>Budgeting and variance reporting</li>
+              <li>Credit and market risk basics</li>
+            </ul>
+          </div>
+          <div class="skills-col">
+            <h3>Tools</h3>
+            <ul class="skills-list">
+              <li>Excel and VBA</li>
+              <li>Python (pandas, NumPy)</li>
+              <li>SQL</li>
+              <li>Power BI and Bloomberg Terminal</li>
+            </ul>
+          </div>
+          <div class="skills-col">
+            <h3>Credentials</h3>
+            <ul class="skills-list">
+              <li>CFA Level III candidate</li>
+              <li>B.Sc. Finance, University name</li>
+              <li>FRM Part I</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-salmon" id="contact">
+      <div class="wrap contact">
+        <div class="contact-copy">
+          <h2 class="section-title">Open to analyst and associate roles</h2>
+          <p>
+            Send a short note about the role or project and I will reply within two working days.
+          </p>
+          <p class="contact-links">
+            <a href="mailto:you@example.com">you@example.com</a><br>
+            <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
+            &nbsp;/&nbsp;
+            <a href="https://github.com/your-username">GitHub</a>
+          </p>
+        </div>
+
+        <!-- Netlify detects this form automatically after you deploy -->
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="visually-hidden">
+            <label>Leave this field empty <input name="bot-field"></label>
+          </p>
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-dark" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer-inner">
+      <p>© 2026 Your Name</p>
+      <p>Figures shown are sample data.</p>
+    </div>
+  </footer>
+</body>
+</html>
