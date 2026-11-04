@@ -15,6 +15,9 @@
   --grey-300: #d5d8dc;      /* rules and gridlines */
   --grey-100: #f2f3f4;      /* light panels */
   --white: #ffffff;
+  --on-salmon: #2e3238;     /* text that sits on salmon, same in both themes */
+  --footer-bg: #2e3238;
+  --footer-text: #d5d8dc;
 
   --font-display: "Gotham", "Montserrat", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Gotham", "Montserrat", "Helvetica Neue", Arial, sans-serif;
@@ -22,6 +25,20 @@
   --radius: 6px;
   --wrap: 1080px;
   --gutter: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+/* Dark theme: same variables, new values */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --salmon-soft: #4a2f26;
+  --salmon-deep: #ffa07a;
+  --ink: #eceef0;
+  --grey-600: #aab0b8;
+  --grey-300: #3b4048;
+  --grey-100: #252a30;
+  --white: #1a1d21;
+  --footer-bg: #121417;
+  --footer-text: #aab0b8;
 }
 
 /* ---------- Gotham ----------
@@ -167,6 +184,76 @@ a {
   border-bottom-color: var(--salmon);
 }
 
+/* ---------- Language and theme toggles ---------- */
+
+html.js:not(.ready) body {
+  visibility: hidden;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-switch {
+  display: flex;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.lang-switch button {
+  height: 2.125rem;
+  padding: 0 0.7rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.theme-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.theme-toggle .icon-sun,
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
 /* ---------- Buttons ---------- */
 
 .btn {
@@ -185,7 +272,7 @@ a {
 
 .btn-primary {
   background: var(--salmon);
-  color: var(--ink);
+  color: var(--on-salmon);
 }
 
 .btn-primary:hover {
@@ -363,7 +450,14 @@ a {
 }
 
 .section-salmon {
+  /* Keep the light values here so text and fields stay readable on salmon in dark mode */
+  --ink: #2e3238;
+  --white: #ffffff;
+  --grey-600: #5b616a;
+  --grey-300: #d5d8dc;
+  --salmon-deep: #c9512c;
   background: var(--salmon);
+  color: var(--ink);
 }
 
 .section-title {
@@ -563,8 +657,8 @@ a {
 
 .site-footer {
   padding-block: 2rem;
-  background: var(--ink);
-  color: var(--grey-300);
+  background: var(--footer-bg);
+  color: var(--footer-text);
   font-size: 0.875rem;
 }
 

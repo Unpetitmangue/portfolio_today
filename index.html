@@ -12,21 +12,45 @@
   <!-- Montserrat is the free fallback until Gotham is added (see README) -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Sets theme and language before the page paints. The default language is Malay: change "ms" below to "en" for English first. -->
+  <script>
+    (function () {
+      var d = document.documentElement, t, l;
+      try { t = localStorage.getItem("theme"); l = localStorage.getItem("lang"); } catch (e) {}
+      if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      if (l !== "en" && l !== "ms") l = "ms";
+      d.setAttribute("data-theme", t); d.lang = l; d.classList.add("js");
+      setTimeout(function () { d.classList.add("ready"); }, 800);
+    })();
+  </script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-ms="Langkau ke kandungan">Skip to content</a>
 
   <header class="site-header">
     <div class="wrap site-header-inner">
       <a class="logo" href="#top">Thyme Inn</a>
-      <nav aria-label="Main">
+      <div class="header-right">
+      <nav aria-label="Main" data-ms-aria-label="Utama">
         <ul class="nav-list">
-          <li><a href="#work">Work</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#cv">CV</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#work" data-ms="Kerja">Work</a></li>
+          <li><a href="#skills" data-ms="Kemahiran">Skills</a></li>
+          <li><a href="#cv" data-ms="CV">CV</a></li>
+          <li><a href="#contact" data-ms="Hubungi">Contact</a></li>
         </ul>
       </nav>
+        <div class="tools">
+          <div class="lang-switch" role="group" aria-label="Language" data-ms-aria-label="Bahasa">
+            <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+            <button type="button" data-lang="ms" lang="ms" aria-label="Bahasa Melayu" aria-pressed="true">BM</button>
+          </div>
+          <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -35,25 +59,24 @@
     <!-- HERO: headline + career chart -->
     <section class="hero" id="top">
       <div class="wrap">
-        <h1 class="hero-title">I turn messy financials into decisions you can act on.</h1>
-        <p class="hero-lede">
-          Financial analyst with eight years in equity research, budgeting and risk modelling.
-          I build forecasts that finance teams trust and explain them in plain language.
+        <h1 class="hero-title" data-ms="Saya menjadikan data kewangan yang berserabut sebagai keputusan yang boleh dilaksanakan.">I turn messy financials into decisions you can act on.</h1>
+        <p class="hero-lede" data-ms="Penganalisis kewangan dengan lapan tahun pengalaman dalam penyelidikan ekuiti, belanjawan dan pemodelan risiko. Saya membina ramalan yang dipercayai pasukan kewangan dan menerangkannya dalam bahasa yang mudah difahami.">
+          Financial analyst with eight years in equity research, budgeting and risk modelling. I build forecasts that finance teams trust and explain them in plain language.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">View selected work</a>
-          <a class="btn btn-secondary" href="downloads/Thyme-Inn-CV.pdf" download>Download CV (PDF)</a>
+          <a class="btn btn-primary" href="#work" data-ms="Lihat kerja pilihan">View selected work</a>
+          <a class="btn btn-secondary" href="downloads/Thyme-Inn-CV.pdf" download data-ms="Muat turun CV (PDF)">Download CV (PDF)</a>
         </div>
 
         <figure class="chart">
           <figcaption class="chart-caption">
-            <span class="chart-title">Career so far</span>
-            <span class="chart-note">Scope of responsibility, 2018–2026 (illustrative)</span>
+            <span class="chart-title" data-ms="Perjalanan kerjaya setakat ini">Career so far</span>
+            <span class="chart-note" data-ms="Skop tanggungjawab, 2018–2026 (ilustrasi)">Scope of responsibility, 2018–2026 (illustrative)</span>
           </figcaption>
 
           <div class="chart-scroll">
             <svg class="chart-svg" viewBox="0 0 1000 330" role="img"
-                 aria-label="Line chart showing responsibility rising from 2018 to 2026, with a dip in 2020 followed by steady growth. Milestones are listed below the chart.">
+                 aria-label="Line chart showing responsibility rising from 2018 to 2026, with a dip in 2020 followed by steady growth. Milestones are listed below the chart." data-ms-aria-label="Carta garis menunjukkan tanggungjawab meningkat dari 2018 hingga 2026, dengan penurunan pada 2020 diikuti pertumbuhan yang stabil. Pencapaian disenaraikan di bawah carta.">
               <g class="chart-grid">
                 <line x1="40" y1="290" x2="960" y2="290"/>
                 <line x1="40" y1="230" x2="960" y2="230"/>
@@ -93,23 +116,23 @@
           <dl class="milestones">
             <div class="milestone">
               <dt>2018</dt>
-              <dd>Junior analyst at Northbridge Capital</dd>
+              <dd data-ms="Penganalisis junior di Northbridge Capital">Junior analyst at Northbridge Capital</dd>
             </div>
             <div class="milestone">
               <dt>2020</dt>
-              <dd>Moved into risk modelling during the downturn</dd>
+              <dd data-ms="Beralih ke pemodelan risiko semasa kemelesetan">Moved into risk modelling during the downturn</dd>
             </div>
             <div class="milestone">
               <dt>2022</dt>
-              <dd>Promoted to senior analyst; passed CFA Level II</dd>
+              <dd data-ms="Dinaikkan pangkat sebagai penganalisis kanan; lulus CFA Tahap II">Promoted to senior analyst; passed CFA Level II</dd>
             </div>
             <div class="milestone">
               <dt>2024</dt>
-              <dd>Led the forecasting rebuild at Harbor Group</dd>
+              <dd data-ms="Mengetuai pembinaan semula sistem ramalan di Harbor Group">Led the forecasting rebuild at Harbor Group</dd>
             </div>
             <div class="milestone">
               <dt>2026</dt>
-              <dd>Associate director, portfolio strategy</dd>
+              <dd data-ms="Pengarah bersekutu, strategi portfolio">Associate director, portfolio strategy</dd>
             </div>
           </dl>
         </figure>
@@ -119,8 +142,8 @@
     <!-- SELECTED WORK -->
     <section class="section section-grey" id="work">
       <div class="wrap">
-        <h2 class="section-title">Selected work</h2>
-        <p class="section-intro">
+        <h2 class="section-title" data-ms="Kerja pilihan">Selected work</h2>
+        <p class="section-intro" data-ms="Empat projek yang angkanya mengubah cara sesebuah pasukan merancang, berbelanja atau melapor.">
           Four projects where the numbers changed how a team planned, spent or reported.
         </p>
 
@@ -129,34 +152,34 @@
           <li class="ledger-row">
             <p class="ledger-year">2025</p>
             <div class="ledger-body">
-              <h3>Rolling revenue forecast</h3>
-              <p>Replaced a quarterly spreadsheet process with a driver-based model that finance and sales both update.</p>
+              <h3 data-ms="Ramalan hasil bergulir">Rolling revenue forecast</h3>
+              <p data-ms="Menggantikan proses hamparan suku tahunan dengan model berasaskan pemacu yang dikemas kini bersama oleh pasukan kewangan dan jualan.">Replaced a quarterly spreadsheet process with a driver-based model that finance and sales both update.</p>
             </div>
-            <p class="ledger-result"><strong>+18%</strong> forecast accuracy</p>
+            <p class="ledger-result"><strong>+18%</strong> <span data-ms="ketepatan ramalan">forecast accuracy</span></p>
           </li>
           <li class="ledger-row">
             <p class="ledger-year">2024</p>
             <div class="ledger-body">
-              <h3>Vendor spend review</h3>
-              <p>Mapped three years of payables, flagged duplicate contracts and renegotiated the largest five suppliers.</p>
+              <h3 data-ms="Semakan perbelanjaan vendor">Vendor spend review</h3>
+              <p data-ms="Memetakan hutang dagangan tiga tahun, mengenal pasti kontrak berganda dan merundingkan semula dengan lima pembekal terbesar.">Mapped three years of payables, flagged duplicate contracts and renegotiated the largest five suppliers.</p>
             </div>
-            <p class="ledger-result"><strong>$2.4M</strong> annual savings</p>
+            <p class="ledger-result"><strong>$2.4M</strong> <span data-ms="penjimatan tahunan">annual savings</span></p>
           </li>
           <li class="ledger-row">
             <p class="ledger-year">2023</p>
             <div class="ledger-body">
-              <h3>Month-end close automation</h3>
-              <p>Scripted reconciliations and variance commentary in Python so the team reviews exceptions, not every line.</p>
+              <h3 data-ms="Automasi penutupan akaun hujung bulan">Month-end close automation</h3>
+              <p data-ms="Menulis skrip Python untuk penyesuaian dan ulasan varians supaya pasukan hanya menyemak pengecualian, bukan setiap baris.">Scripted reconciliations and variance commentary in Python so the team reviews exceptions, not every line.</p>
             </div>
-            <p class="ledger-result"><strong>−32%</strong> days to close</p>
+            <p class="ledger-result"><strong>−32%</strong> <span data-ms="hari untuk menutup akaun">days to close</span></p>
           </li>
           <li class="ledger-row">
             <p class="ledger-year">2021</p>
             <div class="ledger-body">
-              <h3>Sector coverage initiation</h3>
-              <p>Built valuation models and wrote initiating reports for consumer and industrial names.</p>
+              <h3 data-ms="Permulaan liputan sektor">Sector coverage initiation</h3>
+              <p data-ms="Membina model penilaian dan menulis laporan permulaan liputan untuk syarikat pengguna dan perindustrian.">Built valuation models and wrote initiating reports for consumer and industrial names.</p>
             </div>
-            <p class="ledger-result"><strong>11</strong> companies covered</p>
+            <p class="ledger-result"><strong>11</strong> <span data-ms="syarikat diliputi">companies covered</span></p>
           </li>
         </ul>
       </div>
@@ -165,33 +188,33 @@
     <!-- SKILLS -->
     <section class="section" id="skills">
       <div class="wrap">
-        <h2 class="section-title">Skills and credentials</h2>
+        <h2 class="section-title" data-ms="Kemahiran dan kelayakan">Skills and credentials</h2>
 
         <div class="skills">
           <div class="skills-col">
-            <h3>Analysis</h3>
+            <h3 data-ms="Analisis">Analysis</h3>
             <ul class="skills-list">
-              <li>Discounted cash flow and comparables</li>
-              <li>Scenario and sensitivity analysis</li>
-              <li>Budgeting and variance reporting</li>
-              <li>Credit and market risk basics</li>
+              <li data-ms="Aliran tunai diskaun dan syarikat setara">Discounted cash flow and comparables</li>
+              <li data-ms="Analisis senario dan kepekaan">Scenario and sensitivity analysis</li>
+              <li data-ms="Belanjawan dan pelaporan varians">Budgeting and variance reporting</li>
+              <li data-ms="Asas risiko kredit dan pasaran">Credit and market risk basics</li>
             </ul>
           </div>
           <div class="skills-col">
-            <h3>Tools</h3>
+            <h3 data-ms="Alat">Tools</h3>
             <ul class="skills-list">
               <li>Excel and VBA</li>
               <li>Python (pandas, NumPy)</li>
               <li>SQL</li>
-              <li>Power BI and Bloomberg Terminal</li>
+              <li data-ms="Power BI dan Bloomberg Terminal">Power BI and Bloomberg Terminal</li>
             </ul>
           </div>
           <div class="skills-col">
-            <h3>Credentials</h3>
+            <h3 data-ms="Kelayakan">Credentials</h3>
             <ul class="skills-list">
-              <li>CFA Level III candidate</li>
-              <li>B.Sc. Finance, University name</li>
-              <li>FRM Part I</li>
+              <li data-ms="Calon CFA Tahap III">CFA Level III candidate</li>
+              <li data-ms="Ijazah Sarjana Muda Kewangan, nama universiti">B.Sc. Finance, University name</li>
+              <li data-ms="FRM Bahagian I">FRM Part I</li>
             </ul>
           </div>
         </div>
@@ -201,21 +224,21 @@
     <!-- CV AND SLIDES -->
     <section class="section section-grey" id="cv">
       <div class="wrap">
-        <h2 class="section-title">CV and slides</h2>
-        <p class="section-intro">
+        <h2 class="section-title" data-ms="CV dan slaid">CV and slides</h2>
+        <p class="section-intro" data-ms="Simpan salinan untuk dibawa bersama. CV ini sehalaman; slaid pula enam halaman dan sesuai untuk dikongsi di skrin.">
           Take a copy with you. The CV is one page; the slides run six pages and suit a screen share.
         </p>
 
         <div class="downloads">
           <div class="download">
             <h3>Curriculum vitae</h3>
-            <p>Experience, results, skills and credentials on a single A4 page.</p>
-            <a class="btn btn-primary" href="downloads/Thyme-Inn-CV.pdf" download>Download CV (PDF)</a>
+            <p data-ms="Pengalaman, hasil, kemahiran dan kelayakan dalam satu halaman A4.">Experience, results, skills and credentials on a single A4 page.</p>
+            <a class="btn btn-primary" href="downloads/Thyme-Inn-CV.pdf" download data-ms="Muat turun CV (PDF)">Download CV (PDF)</a>
           </div>
           <div class="download">
-            <h3>Slide deck</h3>
-            <p>Profile, career chart, selected work and contact details in a 16:9 deck.</p>
-            <a class="btn btn-secondary" href="downloads/Thyme-Inn-Slides.pdf" download>Download slides (PDF)</a>
+            <h3 data-ms="Set slaid">Slide deck</h3>
+            <p data-ms="Profil, carta kerjaya, kerja pilihan dan butiran perhubungan dalam set slaid 16:9.">Profile, career chart, selected work and contact details in a 16:9 deck.</p>
+            <a class="btn btn-secondary" href="downloads/Thyme-Inn-Slides.pdf" download data-ms="Muat turun slaid (PDF)">Download slides (PDF)</a>
           </div>
         </div>
       </div>
@@ -225,8 +248,8 @@
     <section class="section section-salmon" id="contact">
       <div class="wrap contact">
         <div class="contact-copy">
-          <h2 class="section-title">Open to analyst and associate roles</h2>
-          <p>
+          <h2 class="section-title" data-ms="Terbuka untuk jawatan penganalisis dan associate">Open to analyst and associate roles</h2>
+          <p data-ms="Hantarkan nota ringkas tentang jawatan atau projek tersebut dan saya akan membalas dalam masa dua hari bekerja.">
             Send a short note about the role or project and I will reply within two working days.
           </p>
           <p class="contact-links">
@@ -247,18 +270,18 @@
           </p>
 
           <div class="field">
-            <label for="name">Name</label>
+            <label for="name" data-ms="Nama">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required>
           </div>
           <div class="field">
-            <label for="email">Email</label>
+            <label for="email" data-ms="E-mel">Email</label>
             <input id="email" name="email" type="email" autocomplete="email" required>
           </div>
           <div class="field">
-            <label for="message">Message</label>
+            <label for="message" data-ms="Mesej">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <button class="btn btn-dark" type="submit">Send message</button>
+          <button class="btn btn-dark" type="submit" data-ms="Hantar mesej">Send message</button>
         </form>
       </div>
     </section>
@@ -267,7 +290,7 @@
   <footer class="site-footer">
     <div class="wrap site-footer-inner">
       <p>© 2026 Thyme Inn</p>
-      <p>Figures shown are sample data.</p>
+      <p data-ms="Angka yang dipaparkan ialah data contoh.">Figures shown are sample data.</p>
     </div>
   </footer>
 </body>
